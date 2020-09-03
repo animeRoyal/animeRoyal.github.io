@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icon.ico">
+    <title>AniRoyal</title>
+</head>
+<body>
+    <div class="container">
+        <div class="app">
+            <header>
+                <div class="piku">
+                    <svg width="0.8em" height="0.8em" viewBox="0 0 16 16" class="bi bi-trophy" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 1h10c-.495 3.467-.5 10-5 10S3.495 4.467 3 1zm0 15a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1H3zm2-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1H5z"/>
+                        <path fill-rule="evenodd" d="M12.5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm-6-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-3 2a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"/>
+                        <path d="M7 10h2v4H7v-4z"/>
+                        <path d="M10 11c0 .552-.895 1-2 1s-2-.448-2-1 .895-1 2-1 2 .448 2 1z"/>
+                      </svg>
+                      ПИКУ</div>
+                <div class="cup">Идеальный чемпионат мира</div>
+                <div class="cup-title">МАЛ Битва Рояль</div>
+            </header>
+            <main>
+                <section class="title-1">
+                    <div class="title-1-title-info title-info">
+                        <div class="title-info-container"></div>
+                        <div class="score"></div>
+                    </div>
+                    <div class="title-1-title-img title-img">
+                        <div class="title-img-container"></div>
+                    </div>
+                </section>
+                <section class="title-2">
+                    <div class="title-2-title-info title-info">
+                        <div class="title-info-container"></div>
+                        <div class="score"></div>
+                    </div>
+                    <div class="title-2-title-img title-img">
+                        <div class="title-img-container"></div>
+                    </div>
+                </section>
+                <div class="progress-logo"></div>
+                <div class="progress"></div>
+            </main>
+        </div>
+    </div>
+
+    <div class="modal">
+        <div class="modal-wall"></div>
+        <form name="dataForm">
+        <div class="modal-form">
+            <div class="modal-part modal-form-type">
+                <div class="modal-fl modal-podpart modal-form-type-name"><h2>Royal Type</h2></div>
+                <div class="modal-fl modal-podpart modal-form-type-options">
+                    <div class="type-options formclass">
+                        <input type="radio" name="radio-type-options" id="r-1" checked value="Anime Top">
+                        <label for="r-1">Top Anime Title</label>
+                        <input type="radio" name="radio-type-options" id="r-7" value="Char Top">
+                        <label for="r-7">Top Anime Character</label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-part modal-form-players">
+                <div class="modal-fl modal-podpart modal-form-players-name"><h2>Players</h2></div>
+                <div class="modal-fl modal-podpart modal-form-players-options">
+                    <div class="players-options modal-fl formclass">
+                        <input type="radio" name="radio-players-options" id="r-2" checked value="32">
+                        <label for="r-2">32</label>
+                        <input type="radio" name="radio-players-options" id="r-3" value="64">
+                        <label for="r-3">64</label>
+                        <input type="radio" name="radio-players-options" id="r-4" value="128">
+                        <label for="r-4">128</label>
+                        <input type="radio" name="radio-players-options" id="r-5" value="256">
+                        <label for="r-5">256</label>
+                        <input type="radio" name="radio-players-options" id="r-6" value="512">
+                        <label for="r-6">512</label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-fl btn-div"><button class="start">Start</button></div>
+        </div>
+        </form>
+    </div>
+
+    <script src="./classes/classModal.js"></script>
+    <script src="./classes/classBattle.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
