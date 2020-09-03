@@ -1,7 +1,7 @@
 class AnimeBattle {
 
     constructor() {
-        this.res = './db/json/ani/titles.json'
+        this.resAni = './db/json/ani/titles.json'
         this.resChar = './db/json/char/chars.json'
         this.reArray = [];
         this.looseArray = [];
@@ -21,16 +21,22 @@ class AnimeBattle {
 
 
 
-async getAnimeArray() {
-    const resp = await fetch(this.res);
-    const data = await resp.json();
-    return data;  
-}
-
-async getCharArray() {
-    const resp = await fetch(this.resChar);
-    const data = await resp.json();
-    return data;   
+async getArray(type) {
+    if (type == 'anime_top') {
+        const resp = await fetch(this.resAni);
+        const data = await resp.json();
+        return data;  
+    } else if (type == 'kun_top') {
+        const resp = await fetch(this.resChar);
+        const data = await resp.json();
+        const data1 = data.filter(el => el.gender === 'm')
+        return data1;  
+    } else if (type == 'tyan_top') {
+        const resp = await fetch(this.resChar);
+        const data = await resp.json();
+        const data2 = data.filter(el => el.gender === 'f')
+        return data2;
+    }
 }
 
 

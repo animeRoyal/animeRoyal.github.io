@@ -14,6 +14,16 @@ modal.form.addEventListener('submit', (e) => {
 
     //
 
+    battle.getArray(type)
+                    .then(array => battle.run(array, players))
+                    .catch(err => console.log(`Произошла внезапная жопа - ${err}`))
+
+
+
+
+
+
+/*
 if (type == 'Anime Top') {
     battle.getAnimeArray()
                     .then(array => battle.run(array, players))
@@ -23,7 +33,7 @@ if (type == 'Anime Top') {
     .then(array => battle.run(array, players))
     .catch(err => console.log(`Произошла внезапная жопа - ${err}`))
 }
-
+*/
 
 });
 
