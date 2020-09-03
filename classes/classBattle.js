@@ -69,7 +69,7 @@ changeTitle(target) {
         this.title1_img.classList.remove('unchecked')
         this.title2_img.classList.remove('checked')
         this.title2_img.classList.remove('unchecked')
-    }, 500)
+    }, 300)
 }
 
 
@@ -116,7 +116,7 @@ changeClick = (target, nontarget, title1, title2, array) => {
             this.looseArray.unshift(looseTitle);
             this.fight(array);
         }
-    }, 500)
+    }, 300)
     target.onclick = () => false;
 }
 
